@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Dec.h" />
     <ClInclude Include="Enc.h" />
     <ClInclude Include="STable.h" />
     <ClInclude Include="type.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Dec.c" />
     <ClCompile Include="Enc.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>

@@ -1,6 +1,7 @@
 #include "type.h"
 #include "Enc.h"
 #include "STable.h"
+#include "Dec.h"
 
 int main()
 {
@@ -8,11 +9,17 @@ int main()
 	byte key[Nk] = { 0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0a,0x0b,0x0c,0x0d,0x0e,0x0f };
 	byte cipher[Nb] = { 0, };
 	Encryption(plain, cipher, key);
+	printf("Ciphertext:  ");
 	for (int i = 0; i < 16; i++)
 	{
 		printf("%02x ", cipher[i]);
 	}
+	printf("\nPlaintext:  ");
+	Decryption(cipher, plain, key);
+	for (int i = 0; i < 16; i++)
+	{
+		printf("%02x ", plain[i]);
+	}
 	printf("\n");
-
 	return 0;
 }
